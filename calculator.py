@@ -75,6 +75,11 @@ def log10(value):
         raise ValueError("log10 is undefined for non‑positive values")
     return math.log10(value)
 
+def sine(x):
+    """Return the sine of *x* (x in radians)."""
+    log_debug(f"Calculating sine for input: {x}")
+    return math.sin(x)
+
 if __name__ == "__main__":
     print("10 + 5 =", add(10, 5))
     print("10 * 5 =", multiply(10, 5))
@@ -87,3 +92,4 @@ if __name__ == "__main__":
     print("sqrt(-4) =", sqrt(-4))
     log_debug("This is a debug message")
     print("log10(100) =", log10(100))
+    print("sin(pi/2) =", sine(math.pi/2))
