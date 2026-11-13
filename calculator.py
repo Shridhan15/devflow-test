@@ -12,13 +12,21 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 # New multiply function added
-def multiply(a, b, c=None):
-    """Return the product of two or three numbers.
-    If a third argument is provided, multiply all three.
+def multiply(*args):
+    """Return the product of all provided numbers.
+
+    Args:
+        *args: A variable number of numeric arguments. At least one argument must be provided.
+
+    Returns:
+        The multiplication result of all arguments.
     """
-    if c is not None:
-        return a * b * c
-    return a * b
+    if not args:
+        raise ValueError("multiply requires at least one argument")
+    product = 1
+    for number in args:
+        product *= number
+    return product
 # New divide function added
 def divide(a, b):
     """Return the result of dividing a by b.
