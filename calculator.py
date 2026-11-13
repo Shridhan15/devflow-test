@@ -80,6 +80,11 @@ def sine(x):
     log_debug(f"Calculating sine for input: {x}")
     return math.sin(x)
 
+def cosine(x):
+    """Return the cosine of *x* (x in radians)."""
+    log_debug(f"Calculating cosine for input: {x}")
+    return math.cos(x)
+
 if __name__ == "__main__":
     print("10 + 5 =", add(10, 5))
     print("10 * 5 =", multiply(10, 5))
@@ -93,3 +98,4 @@ if __name__ == "__main__":
     log_debug("This is a debug message")
     print("log10(100) =", log10(100))
     print("sin(pi/2) =", sine(math.pi/2))
+    print("cos(pi) =", cosine(math.pi))
